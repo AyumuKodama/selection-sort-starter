@@ -9,7 +9,7 @@ public class SelectionSortTester {
 		ArrayList<String> wordList = new ArrayList<String>();
 		
         // The name of the file to open.
-        String fileName = "./src/TextFiles/temp.txt";
+        String fileName = "./src/temp.txt";
 
         // This will reference one line at a time
         String line = null;
@@ -26,7 +26,9 @@ public class SelectionSortTester {
             while((line = bufferedReader.readLine()) != null) {
                 String[] split = line.trim().split("\\s+");
                 for (String word : split) {
-                	wordList.add(word);
+                	if (!word.equals("")) {
+                		wordList.add(word);
+                	}
                 }
             }   
 
